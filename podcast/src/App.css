@@ -1,0 +1,205 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  color: #333;
+  width: 100%;
+  display: block !important;
+}
+
+.container {
+  max-width: 2000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: #570909;
+  color: #eceeef;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.navbar a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 1rem;
+}
+
+.navbar a:hover {
+  color: #ddd;
+}
+
+/* Search filter styles */
+.search-filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-filter input[type="text"],
+.search-filter select {
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.search-filter input[type="text"] {
+  width: 300px;
+}
+
+.search-filter select {
+  width: 150px;
+}
+
+/* Show list styles */
+.show-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.show-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.show-card img {
+  width: 100%;
+  height: 150px; /* Adjust the height to a smaller YouTube-like size */
+  object-fit: cover;
+}
+
+.show-details {
+  padding: 10px; /* Reduce padding to match the smaller image size */
+}
+
+.showTitle {
+  font-size: 1.2rem; /* Reduce font size to match the smaller image size */
+  margin-bottom: 5px; /* Reduce margin */
+}
+
+.showSeasons, .Date {
+  color: #666;
+  font-size: 0.8rem; /* Reduce font size */
+}
+
+.showGenre {
+  font-style: italic;
+  color: #888;
+  font-size: 0.8rem; /* Reduce font size */
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .show-card img {
+    height: 120px; /* Adjust image height for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .search-filter {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-filter input[type="text"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .search-filter select {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .show-card img {
+    height: 100px; /* Adjust image height for smaller screens */
+  }
+
+  .showTitle {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+
+  .showSeasons, .Date, .showGenre {
+    font-size: 0.7rem; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 630px) {
+  .show-card img {
+    height: 90px; /* Adjust image height for smaller screens */
+  }
+
+  .showTitle {
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
+  }
+
+  .showSeasons, .Date, .showGenre {
+    font-size: 0.6rem; /* Adjust font size for smaller screens */
+  }
+
+  .navbar a {
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
+  }
+
+  .search-filter input[type="text"],
+  .search-filter select {
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .show-card img {
+    height: 80px; /* Adjust image height for smaller screens */
+  }
+
+  .showTitle {
+    font-size: 0.8rem; /* Adjust font size for smaller screens */
+  }
+
+  .showSeasons, .Date, .showGenre {
+    font-size: 0.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .navbar a {
+    font-size: 0.8rem; /* Adjust font size for smaller screens */
+  }
+
+  .search-filter input[type="text"],
+  .search-filter select {
+    font-size: 0.8rem; /* Adjust font size for smaller screens */
+  }
+}
